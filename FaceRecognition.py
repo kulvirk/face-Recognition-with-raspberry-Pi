@@ -2,7 +2,7 @@
 from Adafruit_CharLCD import Adafruit_CharLCD
 lcd=Adafruit_CharLCD()
 import RPi.GPIO as GPIO
-from find_detect import find_face
+from face_detect import find_face
 from images_labels import get_images_and_labels
 from names import names_to_num
 from camera import  take_pic
