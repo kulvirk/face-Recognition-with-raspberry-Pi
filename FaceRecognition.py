@@ -1,4 +1,4 @@
-import time
+import time
 from Adafruit_CharLCD import Adafruit_CharLCD
 lcd=Adafruit_CharLCD()
 import RPi.GPIO as GPIO
