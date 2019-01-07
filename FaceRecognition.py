@@ -1,6 +1,6 @@
 import time
-from Adafruit_CharLCD import Adafruit_CharLCD
-lcd=Adafruit_CharLCD()
+from AdaLCD import CharLCD
+lcd=CharLCD()
 import RPi.GPIO as GPIO
 from face_detect import find_face
 from images_labels import get_images_and_labels
@@ -14,10 +14,10 @@ cascadePath = "haarcascade_frontalface_default.xml"
 faceCascade = cv2.CascadeClassifier(cascadePath)
 recognizer = cv2.createLBPHFaceRecognizer()
 
-camera=" sudo fswebcam -r 320x240 newface/subject95.jpg subject95.jpg -S 2"
+camera=" sudo fswebcam -r 320x240 newface/face95.jpg face95.jpg -S 2"
 path='./savedfaces'
 path1='./newface'
-image_to_detect="subject95.jpg"
+image_to_detect="face95.jpg"
 
 
 find_face(cascadePath,image_to_detect)
